@@ -45,10 +45,12 @@ p {
           padding: 9px 0 0 26px;
           background: url(../img/top_menu_icons.png) no-repeat;
           background-position: 8px 4px;
+          transition: 0.1s;
 
           &:hover {
             color: $blue;
             background-image: url(../img/top_menu_icons_hover.png);
+            transition: 0.1s;
           }
         }
 
@@ -138,9 +140,19 @@ header {
     }
     .header-contact {
       float: right;
+      position: relative;
 
       .popup {
+        display: none;
         position: absolute;
+        @include border-box();
+        width: 227px;
+        height: 52px;
+        border: 2px solid #d4d4d5;
+        border-radius: 5px;
+        left: -10px;
+        text-align: center;
+        line-height: 45px;
       }
 
       ul {
@@ -159,9 +171,27 @@ header {
             background: url(../img/contact_icons.png) no-repeat;
             background-position: 18px 0;
             position: relative;
+            transition: 0.1s;
+
+            &.active {
+              background-image: url(../img/contact_icons_hover.png);
+            }
+
+            .arrow {
+              display: none;
+              position: absolute;
+              content: "";
+              width: 31px;
+              height: 12px;
+              background: url(../img/popup_arrow.png);
+              top: -17px;
+              left: 17px;
+  
+            }
 
             &:hover {
               background-image: url(../img/contact_icons_hover.png);
+              transition: 0.1s;
             }
 
             &:after {
@@ -225,7 +255,7 @@ nav {
 
           &:hover {
             color: $blue;
-          }
+            }
         }
 
         .nav-active {
@@ -291,7 +321,7 @@ nav {
         }       
       }
 
-      .button {
+      #slider-button {
         float: left;
         width: 106px;
         height: 241px;
@@ -300,9 +330,11 @@ nav {
           display: block;
           height: 100%;
           background: $grey-bg url(../img/slide_arrow.png) 50% 50% no-repeat;
+          transition: 0.1s;
 
           &:hover {
             background-color: $light-grey-bg;
+            transition: 0.1s;
           }          
         }
       }
@@ -469,11 +501,13 @@ h5 {
             font-size: 15px;
             line-height: 40px;
             text-align: center;
+            transition: 0.2s;
 
             &:hover {
               background-color: #fff;
               border-color: #fff;
               color: $main-txt-color;
+              transition: 0.2s;
             }
           }
         }
@@ -518,9 +552,11 @@ h5 {
                 height: 100%;
                 background: url(../img/projects_wrap_buttons.png) no-repeat;
                 background-position: -76px 16px;
+                transition: 0.2s;
 
                 &:hover {
                   background-image: url(../img/projects_wrap_buttons_hover.png);
+                  transition: 0.2s;
                 }
               }
             }
@@ -603,9 +639,11 @@ h5 {
               height: 100%;
               background: url(../img/team_social_icons.png) no-repeat;
               background-position: 0 0;
+              transition: 0.2s;
 
               &:hover {
                 background-image: url(../img/team_social_icons_hover.png);
+                transition: 0.2s;
               }
             }
 
@@ -666,10 +704,12 @@ h5 {
             border-radius: 10px;
             background: #fff url(../img/footer_contact_icons.png) no-repeat;
             background-position: 12px 8px;
+            transition: 0.2s;
 
             &:hover {
             background-image: url(../img/footer_contact_icons_hover.png);
             background-color: $blue;
+            transition: 0.2s;
             }
           }
 
@@ -719,6 +759,7 @@ footer {
         font-weight: 600;
         width: 400px;
         color: #6d6e71;
+        outline: none;
       }
 
       a {
@@ -744,9 +785,11 @@ footer {
 
         a {
           background-image: url(../img/social_icons_grey.png);
+          transition: 0.2s;
 
           &:hover {
             background-image: url(../img/social_icons_lightgrey.png);
+            transition: 0.2s;
           }
         }
 
@@ -787,9 +830,11 @@ footer {
           font-size: 13px;
           color: #6d6e71;
           font-weight: 200;
+          transition: 0.1s;
 
           &:hover {
             color: #b2b3b4;
+            transition: 0.1s;
           }
         }
       }
