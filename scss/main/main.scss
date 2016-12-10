@@ -390,7 +390,7 @@ h5 {
   font-size: 24px;
 }
 
-.what-we-do {
+#what-we-do {
   padding-top: 60px;
 
   .container{
@@ -454,7 +454,7 @@ h5 {
   }
 }
 
-.projects {
+#our-projects {
 
   background: url(../img/projects_bg.png);
   @include background-size(cover);
@@ -575,7 +575,7 @@ h5 {
   }
 }
 
-.our-team {
+#our-team {
 
   .container {
     padding-top: 38px;
