@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>Landing</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <div class="top-header">
+      <div class="top-header" id="top-header">
         <div class="container">
           <ul class="social">
             <li><a href="#"></a></li>
@@ -30,31 +32,31 @@
             <a href=""></a>
           </div>
           <div class="header-contact">
-            <div class="popup"></div>
+            <div class="popup">Saudi Arabia. Alreyadah</div>
             <ul>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
-              <li><a href="#"></a></li>
+              <li><a href="#" class="contact-icon" data-popuptext="+375 (29) 2222222"><span class="arrow"></span></a></li>
+              <li><a href="#" class="contact-icon" data-popuptext="Saudi Arabia. Alreyadah"><span class="arrow"></span></a></li>
+              <li><a href="#" class="contact-icon" data-popuptext="blablabla@gmail.com"><span class="arrow"></span></a></li>
             </ul>
           </div>
           <div class="clearfix"></div>
-        </div>  
-        <nav>
-          <div class="nav-container">
-            <ul>
-              <li><a href="#" class = "nav-active">Home</a></li>
-              <li><a href="#">What about ISAMA</a></li>
-              <li><a href="#">What we do?</a></li>
-              <li><a href="#">Our projects</a></li>
-              <li><a href="#">Excelent team</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="search">
-              <a href="#"></a>
-            </div>
+        </div>
+      </header>  
+      <nav id="nav">
+        <div class="container">
+          <ul>
+            <li><a href="#top-header" class="nav-list nav-active">Home</a></li>
+            <li><a href="#what-about-isama" class="nav-list">What about ISAMA</a></li>
+            <li><a href="#what-we-do" class="nav-list">What we do?</a></li>
+            <li><a href="#our-projects" class="nav-list">Our projects</a></li>
+            <li><a href="#our-team" class="nav-list">Excelent team</a></li>
+            <li><a href="#contact" class="nav-list">Contact</a></li>
+          </ul>
+          <div class="search">
+            <a href="#"></a>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
       <div class="about">
         <div class="container">
           <div class="title">
@@ -63,19 +65,19 @@
           </div>
           <div class="slider">
             <div class="picture-wrapper">
-              <img src="img/slider_img_1.jpg" alt="img">
+              <img id="slider-picture1" src="img/slider_img_1.jpg" alt="img">
               <div class="like"></div>
             </div>
             <div class="picture-wrapper">
-              <img src="img/slider_img_2.jpg" alt="img">
+              <img id="slider-picture2" src="img/slider_img_2.jpg" alt="img">
               <div class="like"></div>
             </div>
-            <div class="button">
-              <a href="#"></a>
+            <div id="slider-button">
+              <a href="javascript:void(0)"></a>
             </div>
             <div class="clearfix"></div>
           </div>
-          <div class="content">
+          <div class="content" id="what-about-isama">
             <div class="column left">
               <h4>What about ISAMA</h4>
               <p>ISAMA is a marketing foundation located in Riyadh built on the talent of creation that leads to a modern concept of professionalism. At ISAMA we believe even if you are good at what you do, you have a great product or you provide an excellent service. We still can present you a little better to the world, creating your full identity, provides you with your marketing plans, design your website, print your publications, design your logo’s and offices. Simply we give your business the perfect image.</p>
@@ -89,7 +91,7 @@
           <div class="divide"></div>
         </div>
       </div>
-      <div class="what-we-do">
+      <div id="what-we-do">
         <div class="container">
           <div class="head">
             <h3>What we do ?</h3>
@@ -125,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="projects">
+      <div id="our-projects">
         <div class="container">
           <div class="head">
             <h3>Our Projects</h3>
@@ -250,7 +252,7 @@
           </div>
         </div>
       </div>
-      <div class="our-team">
+      <div id="our-team">
         <div class="container">
           <div class="head">
             <h3>Meet Our Team</h3>
@@ -352,11 +354,9 @@
           </ul>
         </div>
       </div>
-      <div class="map">
+      <div class="map" id="contact">
         <div class="container">
           <div class="footer-contact">
-            <div class="popup">
-            </div>
             <ul>
               <li><a href="#"></a></li>
               <li><a href="#"></a></li>
@@ -374,8 +374,8 @@
             <li><a href="#"></a></li>
           </ul>
           <div class="email">
-            <input type="text" placeholder="Enter your email for our newsletter">
-            <a href="#">Join</a>
+            <input type="text" placeholder="Enter your email for our newsletter" id="your-mail">
+            <a href="" id="join">Join</a>
           </div>
           <div class="clearfix"></div>
           <p>© Copyright 2014 - ISAMA for information technology</p>
