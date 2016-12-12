@@ -179,7 +179,8 @@ header {
             &.active {
               background-image: url(../img/contact_icons_hover.png);
 
-              &:before, &:after {
+              &:before,
+              &:after {
                 content: ''; 
                 position: absolute;
                 left: 18px;

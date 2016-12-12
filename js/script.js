@@ -21,7 +21,7 @@ $(document).ready( function() {
   navMenu = $(NAV_BLOCK_ID);
   navMenuHeight = navMenu.outerHeight();
   navPosition = navMenu.offset().top;
-  navList = $(NAV_LIST_ITEM_SELECTOR)
+  navList = $(NAV_LIST_ITEM_SELECTOR);
 
   positionToFixed();
 
@@ -30,19 +30,19 @@ $(document).ready( function() {
   navList.click(navScroll);
   
   $(CONTACTS_SELECTOR).click(function() {
-    var cont = $(CONTACTS_SELECTOR);
+    var contArr = $(CONTACTS_SELECTOR);
     var popup = $(POPUP_SELECTOR);
-    if ($(this).hasClass(CONTACT_ACTIVE_CLASS)){
+    if ($(this).hasClass(CONTACT_ACTIVE_CLASS)) {
       $(this).removeClass(CONTACT_ACTIVE_CLASS);
       popup.hide();
       $(this).children().hide();
     } else {  
-    cont.removeClass(CONTACT_ACTIVE_CLASS);
+    contArr.removeClass(CONTACT_ACTIVE_CLASS);
     $(this).addClass(CONTACT_ACTIVE_CLASS);
     var message = $(this).attr(POPUP_TEXT_ATTR);
     popup.show();
     popup.html(message);
-    cont.children().hide();
+    contArr.children().hide();
     $(this).children().show();
     }
   });
@@ -50,11 +50,11 @@ $(document).ready( function() {
   $(JOIN_BUTTON_ID).click(function() {
     var value = $(EMAIL_INPUT_ID).val();
     console.log(value);
-    $(EMAIL_INPUT_ID).val("");
+    $(EMAIL_INPUT_ID).val('');
   });
 
   $('input').focus(function(){
-    $(this).data('placeholder', $(this).attr('placeholder'))
+    $(this).data('placeholder', $(this).attr('placeholder'));
     $(this).attr('placeholder','');
   });
   $('input').blur(function(){
@@ -68,7 +68,6 @@ $(document).ready( function() {
     $(SLIDER_PICTURE_TWO_ID).attr("src", pictureOne);
   });
 
-  
 });
 
 function navScroll() {
