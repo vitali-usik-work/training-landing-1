@@ -171,37 +171,28 @@ header {
             background: url(../img/contact_icons.png) no-repeat;
             background-position: 18px 0;
             position: relative;
-            transition: 0.1s;
-
-            &.active {
-              background-image: url(../img/contact_icons_hover.png);
-            }
-
-            .arrow {
-              display: none;
-              position: absolute;
-              content: "";
-              width: 31px;
-              height: 12px;
-              background: url(../img/popup_arrow.png);
-              top: -17px;
-              left: 17px;
-  
-            }
 
             &:hover {
               background-image: url(../img/contact_icons_hover.png);
-              transition: 0.1s;
             }
 
-            &:after {
-              content: "";
-              display: block;
-              width: 66px;
-              height: 24px;
-              position: absolute;
-              top: 6px;
-              border-right: 1px solid #bcbec3;
+            &.active {
+              background-image: url(../img/contact_icons_hover.png);
+
+              &:before,
+              &:after {
+                content: ''; 
+                position: absolute;
+                left: 18px;
+                top: -15px;
+                border: 15px solid transparent;
+                border-top: 12px solid #d4d4d5;
+              }
+              
+              &:after {
+                border-top: 12px solid #fff;
+                top: -18px;
+              }
             }
           }
 
@@ -217,10 +208,6 @@ header {
             a {
               background-position: -128px 0;
               border: 0;
-
-              &:after {
-                border: 0;
-              }
             }
           }
         }
@@ -252,6 +239,7 @@ nav {
           padding: 36px 20px;
           font-size: 13px;
           border-right: 1px solid #eceef4;
+          transition: 0.2s;
 
           &:hover {
             color: $blue;
@@ -259,9 +247,17 @@ nav {
         }
 
         .nav-active {
-          background: url(../img/active_nav.png) 50% 100% no-repeat;
           text-transform: uppercase;
           color: $blue;
+          position: relative;
+          &:after {
+            content: ''; 
+            position: absolute;
+            left: 35%;
+            bottom: 0px;
+            border: 20px solid transparent;
+            border-bottom: 9px solid $blue;
+          }
         }
       }
     }
@@ -774,7 +770,14 @@ footer {
         text-decoration: none;
         color: #6d6e71; 
         line-height: 45px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #646768;
+          color: $blue;
+        }
       }
+
     }
 
     .social {
