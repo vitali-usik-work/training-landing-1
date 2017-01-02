@@ -12,6 +12,11 @@ p {
   line-height: 24px;
 }
 
+.head {
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
   font-size: 16px;
   font-family: $main-font;
@@ -138,6 +143,7 @@ header {
         background-image: url(../img/logo.png);
       }
     }
+
     .header-contact {
       float: right;
       position: relative;
@@ -250,6 +256,7 @@ nav {
           text-transform: uppercase;
           color: $blue;
           position: relative;
+
           &:after {
             content: ''; 
             position: absolute;
@@ -305,7 +312,7 @@ nav {
 
     .slider {
       margin-top: 151px;
-      padding-left: 410px;
+      float: right;
 
       .picture-wrapper {
         float: left;
@@ -389,12 +396,14 @@ h5 {
 #what-we-do {
   padding-top: 60px;
 
-  .container{
+  .container {
 
     .head {
-      padding: 31px 0 25px 466px;
-      background: url(../img/darts.png) no-repeat;
-      background-position: 301px 8px;
+
+      .title-wrapper {
+        padding: 31px 0 25px 135px;
+        background: url(../img/darts.png) no-repeat;
+      }
     }
 
     .services {
@@ -460,9 +469,11 @@ h5 {
     padding-bottom: 83px;
 
     .head {
-      padding: 50px 320px 10px 505px;
-      background: url(../img/projects_bottle.png) no-repeat;
-      background-position: 336px 0;
+
+      .title-wrapper {
+        padding: 50px 0 10px 145px;
+        background: url(../img/projects_bottle.png) no-repeat;
+      }
     }
 
     .projects-menu {
@@ -477,6 +488,7 @@ h5 {
           width: 157px;
           height: 46px;
           margin-right: 15px;
+          margin-bottom: 15px;
 
           &:first-of-type {
             width: 122px;
@@ -575,18 +587,21 @@ h5 {
 
   .container {
     padding-top: 38px;
-    padding-bottom: 102px;
+    padding-bottom: 70px;
 
     .head {
-      padding: 57px 220px 5px 502px;
-      background: url(../img/team_head_icon.png) no-repeat;
-      background-position: 340px 8px;
-      margin-bottom: 80px;
+
+      .title-wrapper {
+        padding: 57px 0 5px 150px;
+        background: url(../img/team_head_icon.png) no-repeat;
+        margin-bottom: 80px;
+      }
     }
 
     ul.team-list {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
 
       li.team {
         height: 395px;
@@ -595,6 +610,7 @@ h5 {
         @include border-box;
         background: $light-grey-bg;
         border-radius: 5px;
+        margin-bottom: 30px;
 
         .photo_wrap {
           width: 127px;
@@ -851,3 +867,185 @@ footer {
     }
   }
 }
+
+@media (max-width: 1159px) {
+
+  p {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 34px;
+  }
+
+  .wrapper {
+    min-width: 680px;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  nav {
+
+    .container {
+
+      ul {
+
+        li {
+
+          a {
+            padding: 25px 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    @include background-size(110%);
+
+    .container {
+      padding-top: 140px;
+
+      .title {
+        padding-left: 120px;
+
+        h2 {
+          font-size: 45px;
+          line-height: 50px;
+        }
+
+        p {
+          font-size: 30px;
+          padding-left: 80px;
+
+          &:before {
+            background-repeat: no-repeat;
+            background-size: 60px;
+            background-position: 0px 25px;
+          }
+        }
+      }
+
+      .slider {
+
+        .picture-wrapper {
+          width: 290px;
+          height: 217px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        #slider-button {
+          width: 100px;
+          height: 217px;
+        }
+      }
+
+      .content {
+
+        .column {
+          width: 50%;
+          padding-left: 90px;
+          padding-top: 100px; 
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .left {
+          padding-right: 5px;
+          @include background-size(75px);
+          background-position: 0 100px;
+        }
+
+        .right {
+          padding-left: 110px;
+          @include background-size(75px);
+          background-position: 20px 100px;
+        }
+      }
+
+      .divide {
+        @include background-size(100%);
+      }
+    }
+  }
+
+  #what-we-do {
+    padding-top: 60px;
+
+    .container{
+
+      .services {
+
+        .row {
+          justify-content: space-around;
+
+          .column {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+  
+  #our-projects {
+
+    .container {
+
+      .projects-menu {
+        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+
+        ul {
+          margin-left: 0;
+
+          li {
+
+            width: 140px;
+
+            &:first-of-type {
+              width: 100px;
+            }
+          }
+        }
+      }
+
+      .projects-gallery {
+
+        ul {
+          justify-content: space-around;
+          
+        }
+      }
+    }
+  }
+
+  #our-team {
+
+    .container {
+      
+      ul.team-list {
+        justify-content: space-around;
+      }
+    }
+  }
+  
+  footer {
+
+    .container {
+
+      .email {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
