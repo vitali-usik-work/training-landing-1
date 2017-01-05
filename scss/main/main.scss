@@ -34,7 +34,6 @@ p {
   background: $grey-bg;
   
   .container {
-
     .top-header-menu {
       padding: 16px 0;
 
@@ -60,21 +59,18 @@ p {
         }
 
         &:nth-of-type(2){
-
           a {
             background-position: -95px 4px;
           }
         }
 
         &:nth-of-type(3){
-
           a {
             background-position: -196px 4px;
           }
         }
 
         &:nth-of-type(4){
-
           a {
             background-position: -302px 4px;
           }
@@ -102,14 +98,12 @@ p {
     }
 
     &:nth-of-type(2) {
-
       a {
         background-position: -42px 20px;
       }
     }
 
     &:nth-of-type(3) {
-
       a {
         background-position: -108px 20px;
       }
@@ -203,14 +197,12 @@ header {
           }
 
           &:nth-of-type(2) {
-
             a {
               background-position: -54px 0;
             }
           }
 
           &:nth-of-type(3) {
-
             a {
               background-position: -128px 0;
               border: 0;
@@ -236,7 +228,6 @@ nav {
     
 
     ul {
-
       li {
         display: inline-block;
 
@@ -397,9 +388,7 @@ h5 {
   padding-top: 60px;
 
   .container {
-
     .head {
-
       .title-wrapper {
         padding: 31px 0 25px 135px;
         background: url(../img/darts.png) no-repeat;
@@ -453,14 +442,12 @@ h5 {
 }
 
 .head {
-
   p {
     margin-top: 7px;
   }
 }
 
 #our-projects {
-
   background: url(../img/projects_bg.png);
   @include background-size(cover);
 
@@ -469,7 +456,6 @@ h5 {
     padding-bottom: 83px;
 
     .head {
-
       .title-wrapper {
         padding: 50px 0 10px 145px;
         background: url(../img/projects_bottle.png) no-repeat;
@@ -584,13 +570,11 @@ h5 {
 }
 
 #our-team {
-
   .container {
     padding-top: 38px;
     padding-bottom: 70px;
 
     .head {
-
       .title-wrapper {
         padding: 57px 0 5px 150px;
         background: url(../img/team_head_icon.png) no-repeat;
@@ -660,14 +644,12 @@ h5 {
             }
 
             &:nth-of-type(2) {
-
               a {
                 background-position: -50px 0;
               }
             }
 
             &:nth-of-type(3) {
-
               a {
                 background-position: -101px 0;
               }
@@ -726,7 +708,6 @@ h5 {
           }
 
           &:nth-of-type(2) {
-
             a {
               background-position: -62px 8px;
             }
@@ -839,7 +820,6 @@ footer {
         }
 
         &:last-of-type {
-
           &:after {
             display: none;
           }
@@ -930,7 +910,6 @@ footer {
       }
 
       .slider {
-
         .picture-wrapper {
           width: 290px;
           height: 217px;
@@ -947,7 +926,6 @@ footer {
       }
 
       .content {
-
         .column {
           width: 50%;
           padding-left: 90px;
@@ -981,9 +959,7 @@ footer {
     padding-top: 60px;
 
     .container{
-
       .services {
-
         .row {
           justify-content: space-around;
 
@@ -996,9 +972,7 @@ footer {
   }
   
   #our-projects {
-
     .container {
-
       .projects-menu {
         margin-top: 70px;
         display: flex;
@@ -1008,7 +982,6 @@ footer {
           margin-left: 0;
 
           li {
-
             width: 140px;
 
             &:first-of-type {
@@ -1019,29 +992,25 @@ footer {
       }
 
       .projects-gallery {
-
         ul {
           justify-content: space-around;
-          
         }
       }
     }
   }
 
   #our-team {
-
     .container {
-      
-      ul.team-list {
+      ul {
+        &.team-list {
         justify-content: space-around;
+        }
       }
     }
   }
   
   footer {
-
     .container {
-
       .email {
         margin-top: 50px;
       }
